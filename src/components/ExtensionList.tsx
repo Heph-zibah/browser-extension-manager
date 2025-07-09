@@ -3,37 +3,37 @@ import React from "react";
 import Image from "next/image";
 import type { ExtensionProps } from "@/lib/type";
 
-const ExtensionGrid = ({
+const ExtensionList = ({
   filteredLists,
   handleRemove,
   handleToggle,
 }: ExtensionProps) => {
   return (
     <section>
-      <div className="grid lg:grid-cols-3 gap-5 mt-6">
+      <div className=" mt-6 space-y-5">
         {filteredLists.map((item) => (
           <div
             key={item.name}
-            className="bg-white dark:bg-[var(--neutral-700)] text-[var(--neutral-900)] dark:text-white rounded-xl py-5 px-3 shadow-lg flex flex-col justify-between gap-8"
+            className="bg-white dark:bg-[var(--neutral-700)] text-[var(--neutral-900)] dark:text-white rounded-xl py-3 px-3 shadow-lg grid grid-cols-6 items-center justify-center gap-8"
           >
-            <div className="flex  gap-4">
+            
               <div>
                 <Image
                   src={item.logo}
                   alt={item.name}
-                  width={100}
-                  height={100}
-                  className="w-auto h-auto "
+                  width={50}
+                  height={50}
+                  className=" col-span-1 "
                 />
               </div>
-              <div>
-                <h1 className="text-xl font-bold mb-2">{item.name}</h1>
-                <p className="font-medium text-[var(--neutral-600)] text-sm dark:text-[var(--neutral-300)]">
+              
+                <h1 className="text-xl font-bold mb-2 flex-3 col-span-1">{item.name}</h1>
+                <p className="font-medium text-[var(--neutral-600)] text-sm dark:text-[var(--neutral-300)] flex-wrap col-span-2">
                   {item.description}
                 </p>
-              </div>
-            </div>
-            <div className="flex items-center justify-between">
+              
+            
+            
               <button
                 type="button"
                 onClick={() => handleRemove(item.name)}
@@ -44,7 +44,7 @@ const ExtensionGrid = ({
               <button
                 type="button"
                 onClick={() => handleToggle(item.name)}
-                className={`w-11 h-6 rounded-full   transition-colors duration-300 focus:ring-2 focus:ring-[var(--red-500)] dark:focus:ring-[var(--red-400)]  ${
+                className={`w-11 h-6 rounded-full  col-span-1 mx-auto  transition-colors duration-300 focus:ring-2 focus:ring-[var(--red-500)] dark:focus:ring-[var(--red-400)]  ${
                   item.isActive
                     ? "bg-[var(--red-700)] dark:bg-[var(--red-500)]"
                     : "bg-[var(--neutral-300)]"
@@ -56,7 +56,7 @@ const ExtensionGrid = ({
                   }`}
                 ></div>
               </button>
-            </div>
+            
           </div>
         ))}
       </div>
@@ -64,4 +64,4 @@ const ExtensionGrid = ({
   );
 };
 
-export default ExtensionGrid
+export default ExtensionList
