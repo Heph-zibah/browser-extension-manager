@@ -7,10 +7,13 @@ const Filter = ({filterOptions, activeFilter, setActiveFilter, view, setView}: F
   return (
     <section>
       <div className="flex flex-col md:flex-row gap-5 items-center justify-between ">
-        <h1 className="text-[var(--neutral-900)] dark:text-white font-bold text-2xl">
-          Extension {view === "grid" ? "Grid" : "List"}
+        <h1 className="text-[var(--neutral-900)] dark:text-white font-bold text-2xl ">
+          Extension <span className="md:hidden">List</span>
+          <span className="hidden md:inline-block">
+            {view === "grid" ? "Grid" : "List"}
+          </span>
         </h1>
-        <div className="flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-3">
           <button
             type="button"
             onClick={() => setView("grid")}
