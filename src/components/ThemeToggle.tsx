@@ -14,7 +14,7 @@ const ThemeToggle = ({ isDarkMode, toggleDarkMode }: ThemeToggleProps ) => {
           alt="switch to dark mode"
           width={24}
           height={24}
-          className="w-auto h-auto bg-[var(--neutral-100)] p-2 rounded-xl cursor-pointer hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors duration-300 focus:ring-2 focus:ring-[var(--red-500)] dark:focus:ring-[var(--red-400)]"
+          className="w-auto h-auto bg-[var(--neutral-100)] p-2 rounded-xl cursor-pointer hover:bg-[var(--neutral-300)]  transition-colors duration-300 focus:ring-2 focus:ring-[var(--red-500)] "
           onClick={toggleDarkMode}
         />
       ) : (
@@ -23,7 +23,7 @@ const ThemeToggle = ({ isDarkMode, toggleDarkMode }: ThemeToggleProps ) => {
           alt="switch to light mode"
           width={24}
           height={24}
-          className="w-auto h-auto p-2 rounded-xl cursor-pointer bg-[var(--neutral-600)] transition-colors duration- focus:ring-2 focus:ring-[var(--red-500)] dark:focus:ring-[var(--red-400)]"
+          className="w-auto h-auto p-2 rounded-xl cursor-pointer dark:bg-[var(--neutral-600)] transition-colors duration- focus:ring-2 ] dark:focus:ring-[var(--red-400)] "
           onClick={toggleDarkMode}
         />
       )}

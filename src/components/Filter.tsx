@@ -17,10 +17,10 @@ const Filter = ({filterOptions, activeFilter, setActiveFilter, view, setView}: F
           <button
             type="button"
             onClick={() => setView("grid")}
-            className={`px-3 py-1 rounded ${
+            className={`px-3 py-1 rounded-xl font-medium ${
               view === "grid"
-                ? "bg-[var(--red-500)] text-white"
-                : "bg-white text-[var(--neutral-900)] dark:bg-[var(--neutral-700)] dark:text-white"
+                ? "bg-[var(--red-500)] text-white dark:text-[var(--neutral-900)] hover:bg-[var(--red-700)] transition-colors duration-300"
+                : "bg-white text-[var(--neutral-900)] dark:bg-[var(--neutral-700)] dark:text-white hover:text-[var(--neutral-300)] dark:hover:bg-[var(--neutral-600)] dark:hover:text-white transition-colors duration-300"
             }`}
           >
             Grid
@@ -28,10 +28,10 @@ const Filter = ({filterOptions, activeFilter, setActiveFilter, view, setView}: F
           <button
             type="button"
             onClick={() => setView("list")}
-            className={`px-3 py-1 rounded ${
+            className={`px-3 py-1 rounded-xl font-medium ${
               view === "list"
-                ? "bg-[var(--red-500)] text-white"
-                : "bg-white text-[var(--neutral-900)] dark:bg-[var(--neutral-700)] dark:text-white"
+                ? "bg-[var(--red-500)] text-white dark:text-[var(--neutral-900)] hover:bg-[var(--red-700)] transition-colors duration-300"
+                : "bg-white text-[var(--neutral-900)] dark:bg-[var(--neutral-700)] dark:text-white  hover:text-[var(--neutral-300)] dark:hover:bg-[var(--neutral-600)] dark:hover:text-white transition-colors duration-300"
             }`}
           >
             List
@@ -46,8 +46,8 @@ const Filter = ({filterOptions, activeFilter, setActiveFilter, view, setView}: F
                   onClick={() => setActiveFilter(tab)}
                   className={`rounded-full cursor-pointer px-3 py-1 shadow ${
                     activeFilter === tab
-                      ? "bg-[var(--red-500)] text-white dark:text-[var(--neutral-900)]"
-                      : "bg-white dark:bg-[var(--neutral-700)] text-[var(--neutral-900)] dark:text-white"
+                      ? "bg-[var(--red-500)] text-white dark:text-[var(--neutral-900)] hover:bg-[var(--red-700)] transition-colors duration-300"
+                      : "bg-white dark:bg-[var(--neutral-700)] text-[var(--neutral-900)] dark:text-white hover:text-[var(--neutral-300)] dark:hover:bg-[var(--neutral-600)] dark:hover:text-white transition-colors duration-300"
                   }`}
                 >
                   {tab}

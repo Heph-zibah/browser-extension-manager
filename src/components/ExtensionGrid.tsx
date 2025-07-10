@@ -37,7 +37,7 @@ const ExtensionGrid = ({
               <button
                 type="button"
                 onClick={() => handleRemove(item.name)}
-                className="text-sm py-2 px-4 rounded-full border border-[var(--neutral-300)] font-medium focus:ring-2 focus:ring-[var(--red-500)] dark:focus:ring-[var(--red-400)] text-[var(--neutral-900)] dark:text-white hover:bg-[var(--neutral-100)] dark:hover:bg-[var(--neutral-600)] transition-colors duration-300"
+                className="text-sm py-2 px-4 rounded-full border border-[var(--neutral-300)] font-medium focus:ring-2 focus:ring-[var(--red-500)] dark:focus:ring-[var(--red-400)] text-[var(--neutral-900)] dark:text-white hover:bg-[var(--red-700)] hover:text-white dark:hover:bg-[var(--red-700)] dark:hover:text-[var(--neutral-900)] dark:hover:border-none transition-colors duration-300"
               >
                 Remove
               </button>
